@@ -26,10 +26,26 @@ const Leftside = (props) => {
         <Item>
           <span>
             <img src="/images/item-icon.svg" alt="" />
+            My Items
           </span>
-          <span>My Items</span>
         </Item>
       </ArtCard>
+
+      <CommunityCard>
+        <a>
+          <span>Groups</span>
+        </a>
+        <a>
+          <span>
+            Events
+            <img src="/images/plus-icon.svg" alt="" />
+          </span>
+        </a>
+        <a>Follow Hashtags</a>
+        <a>
+          <span>Discover More</span>
+        </a>
+      </CommunityCard>
     </Container>
   );
 };
@@ -87,6 +103,7 @@ const Link = styled.div`
   color: rgba(0, 0, 0, 0.9);
   font-weight: 600;
 `;
+
 const AddPhotoText = styled.div`
   color: #0a66c2;
   margin-top: 4px;
@@ -150,6 +167,39 @@ const Item = styled.a`
 
   &:hover {
     background-color: rgba(0, 0, 0, 0.08);
+  }
+`;
+
+const CommunityCard = styled(ArtCard)`
+  padding: 8px 0 0;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  a {
+    color: black;
+    padding: 4px 12px 4px 12px;
+    font-size: 12px;
+
+    &:hover {
+      color: #0a66c2;
+    }
+
+    span {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    &:last-child {
+      color: rgba(0, 0, 0, 0.6);
+      text-decoration: none;
+      border-top: 1px solid #d6cec2;
+
+      padding: 12px;
+      &:hover {
+        background-color: rgba(0, 0, 0, 0.08);
+      }
+    }
   }
 `;
 
