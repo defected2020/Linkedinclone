@@ -61,24 +61,22 @@ const Main = (props) => {
               <a> 2 comments</a>
             </li>
           </SocialCounts>
-          <SocialActions>
-            <button>
-              <img src="/images/thumb-up.png" alt="" />
-              <span>Like</span>
-            </button>
-            <button>
-              <img src="/images/comment.png" alt="" />
-              <span>Comments</span>
-            </button>
-            <button>
-              <img src="/images/send.png" alt="" />
-              <span>Send</span>
-            </button>
-            <button>
-              <img src="/images/share.png" alt="" />
-              <span>Share</span>
-            </button>
-          </SocialActions>
+          <button>
+            <img src="/images/thumb-up.png" alt="" />
+            <span>Like Test</span>
+          </button>
+          <button>
+            <img src="/images/comment.png" alt="" />
+            <span>Comments</span>
+          </button>
+          <button>
+            <img src="/images/send.png" alt="" />
+            <span>Send</span>
+          </button>
+          <button>
+            <img src="/images/share.png" alt="" />
+            <span>Share</span>
+          </button>
         </Article>
       </div>
     </Container>
@@ -257,32 +255,6 @@ const SocialCounts = styled.ul`
   }
   button {
     display: flex;
-    img {
-      width: 25px;
-      height: 25px;
-    }
-  }
-`;
-
-const SocialActions = styled.div`
-  align-items: center;
-  display: flex;
-  justify-content: flex-start;
-  margin: 0;
-  min-height: 40px;
-  padding: 4px 8px;
-
-  button {
-    display: inline-flex;
-    align-items: center;
-    padding: 8px;
-    color: #0a66c2;
-
-    @media (min-width: 768px) {
-      span {
-        margin-left: 8px;
-      }
-    }
     img {
       width: 25px;
       height: 25px;
