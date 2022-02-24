@@ -109,7 +109,13 @@ const BannerCard = styled(FollowCard)`
   display: flex;
   align-items: center;
   font-size: 14px;
-  padding: 12px 16px 0;
+  padding: 10px;
+
+  img {
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+  }
 `;
 
 const Recommendations = styled.a`
