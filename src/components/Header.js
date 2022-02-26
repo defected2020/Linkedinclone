@@ -202,7 +202,7 @@ const NavList = styled.li`
       display: flex;
       align-items: center;
     }
-    @media (max-width: 768) {
+    @media (max-width: 768px) {
       min-width: 70px;
     }
   }
@@ -227,6 +227,12 @@ const SignOut = styled.div`
   transition-duration: 167ms;
   text-align: center;
   display: none;
+  border-style: dotted;
+
+  @media (max-width: 768px) {
+    bottom: 0px;
+    top: 0px;
+  }
 `;
 
 const User = styled(NavList)`
@@ -249,6 +255,7 @@ const User = styled(NavList)`
       align-items: center;
       display: flex;
       justify-content: center;
+      cursor: pointer;
     }
   }
 `;

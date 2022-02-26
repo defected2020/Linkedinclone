@@ -1,12 +1,32 @@
 import styled from "styled-components";
+import PostModal from "./PostModal";
+import { useState } from "react";
 
 const Main = (props) => {
+  const [showModal, setShowModal] = useState("close");
+  const handleClick = (e) => {
+    e.preventDefault();
+    if (e.target !== e.currentTarget) {
+      return;
+    }
+    switch (showModal) {
+      case "open":
+        setShowModal("close");
+        break;
+      case "close":
+        setShowModal("open");
+        break;
+      default:
+        setShowModal("close");
+        break;
+    }
+  };
   return (
     <Container>
       <ShareBox>
         <div>
           <img src="/images/user.svg" alt="" />
-          <button>Start a post</button>
+          <button onClick={handleClick}>Start a post</button>
         </div>
 
         <div>
@@ -81,6 +101,7 @@ const Main = (props) => {
           </SocialActions>
         </Article>
       </div>
+      <PostModal showModal={showModal} handleClick={handleClick} />
     </Container>
   );
 };
@@ -111,6 +132,7 @@ const ShareBox = styled(CommonCard)`
       outline: none;
       color: rgba(0, 0, 0, 0.6);
       font-size: 14px;
+      cursor: pointer;
       line-height: 1.5;
       min-height: 48px;
       background: transparent;
@@ -214,6 +236,7 @@ const SharedActor = styled.div`
     background: transparent;
     border: none;
     outline: none;
+    cursor: pointer;
     img {
       width: 20px;
       height: 20px;
@@ -256,6 +279,7 @@ const SocialCounts = styled.ul`
     font-size: 12px;
   }
   button {
+    cursor: pointer;
     display: flex;
     img {
       width: 25px;
@@ -274,6 +298,7 @@ const SocialActions = styled.div`
 
   button {
     display: inline-flex;
+    cursor: pointer;
     align-items: center;
     padding: 8px;
     color: #0a66c0;
