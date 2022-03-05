@@ -115,6 +115,9 @@ const BannerCard = styled(FollowCard)`
     object-fit: contain;
     width: 100%;
     height: 100%;
+    @media (max-width: 832px) {
+      display: none;
+    }
   }
 `;
 

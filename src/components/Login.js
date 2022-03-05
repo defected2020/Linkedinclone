@@ -116,9 +116,11 @@ const Hero = styled.div`
     line-height: 70px;
     @media (max-width: 768px) {
       text-align: center;
-      font-size: 20px;
+      font-size: 26px;
+      font-weight: 300;
       width: 100%;
       line-height: 2;
+      padding-bottom: 50px;
     }
   }
 
@@ -129,9 +131,15 @@ const Hero = styled.div`
     position: absolute;
     bottom: -2px;
     right: -50px;
+    @media (max-width: 1050px) {
+      width: 500px;
+    }
     @media (max-width: 768px) {
       top: 230px;
-      width: initial;
+      width: 500px;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
       position: initial;
       height: initial;
     }
@@ -142,7 +150,10 @@ const Form = styled.div`
   margin-top: 100px;
   width: 408px;
   @media (max-width: 768px) {
-    margin-top: 20px;
+    margin-top: 40px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
   }
 `;
 
@@ -165,6 +176,8 @@ const Google = styled.button`
   &:hover {
     background-color: rgba(207, 207, 207, 0.25);
     color: rgba(0, 0, 0, 0.75);
+  }
+  @media (max-width: 768px) {
   }
 `;
 

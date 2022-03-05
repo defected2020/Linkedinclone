@@ -68,12 +68,13 @@ const Section = styled.section`
 const Layout = styled.section`
   display: grid;
   grid-template-areas: "leftside main rightside";
-  grid-template-columns: minmax(0, 5fr) minmax(0, 12fr) minmax(300px, 7fr);
+  grid-template-columns: minmax(100px, 5fr) minmax(0, 12fr) minmax(200px, 7fr);
+  /* grid-template-columns: minmax(0, 5fr) minmax(0, 12fr) minmax(300px, 7fr); */
   column-gap: 25px;
   row-gap: 25px;
   /* grid-template-row: auto; */
   margin: 25px;
-  @media (max-width: 768px) {
+  @media (max-width: 832px) {
     display: flex;
     flex-direction: column;
     padding: 0 5px;
